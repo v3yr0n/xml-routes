@@ -1,4 +1,4 @@
-# simple:xml-routes
+# v3yr0n:xml-routes
 
 <https://atmospherejs.com/simple/xml-routes>
 

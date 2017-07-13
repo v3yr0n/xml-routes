@@ -128,12 +128,7 @@ function setHeaders(res, headers) {
 
 function writeJsonToBody(res, json) {
   if (json !== undefined) {
-   /*var shouldPrettyPrint = (process.env.NODE_ENV === 'development');
-    var spacer = shouldPrettyPrint ? 2 : null;
-    res.setHeader('Content-type', 'application/json');
-    res.write(JSON.stringify(json, null, spacer));*/
     res.setHeader('Content-type', 'application/xml');
     res.write(js2xmlParser.parse("key", json));
-    
   }
 }
