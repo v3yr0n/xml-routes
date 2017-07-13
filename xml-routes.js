@@ -103,7 +103,7 @@ XmlRoutes.setResponseHeaders = function (headers) {
  *   stringify as the response. If `null`, the response will be "null".
  *   If `undefined`, there will be no response body.
  */
-XmlRoutes.sendResult = function (res, options) {
+XmlRoutes.sendResult = function (res, options, xmlKey) {
   options = options || {};
 
   // We've already set global headers on response, but if they
@@ -126,9 +126,9 @@ function setHeaders(res, headers) {
   });
 }
 
-function writeJsonToBody(res, json) {
+function writeJsonToBody(res, json, xmlKey) {
   if (json !== undefined) {
     res.setHeader('Content-type', 'application/xml');
-    res.write(js2xmlParser.parse("key", json));
+    res.write(js2xmlParser.parse(xmlKey, json));
   }
 }
