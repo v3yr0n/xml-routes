@@ -1,6 +1,6 @@
 Package.describe({
   name: 'v3yr0n:xml-routes',
-  version: '2.1.1',
+  version: '2.1.2',
 
   // Brief, one-line summary of the package.
   summary: 'The simplest way to define server-side routes that return XML',

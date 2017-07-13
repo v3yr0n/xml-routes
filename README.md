@@ -15,7 +15,7 @@ XmlRoutes.add("get", "/posts/:id", function (req, res, next) {
 
   XmlRoutes.sendResult(res, {
     data: Posts.findOne(id)
-  });
+  }, "xmlKey");
 });
 ```
 
